@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 15px;
+    color: darkgray;
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f0f0f5;
+  }
+
+  .web-server-heading {
+    color: skyblue;
+    font-size: 22px;
+    padding-left: 0;
+  }
+
+  .save-advanced-vpn-settings {
+    --background: white;
+    color: darkgrey;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 25px;
+    width: 20%;
+    display: block;
+}

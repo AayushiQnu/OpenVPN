@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-searchbar placeholder="Filter records" [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <ion-label class="heading">User Name</ion-label>
+      <ion-label class="heading">Start Time</ion-label>
+      <ion-label class="heading">Duration</ion-label>
+      <ion-label class="heading">Service</ion-label>
+      <ion-label class="heading">Real IP</ion-label>
+      <ion-label class="heading">Error</ion-label>
+    </ion-item>
+    <ion-item *ngFor="let data of userRecords | filter:filterTerm">
+      <ion-label>{{data.userName}}</ion-label>
+      <ion-label>{{data.startTime}}</ion-label>
+      <ion-label>{{data.duration}}</ion-label>
+      <ion-label>{{data.service}}</ion-label>
+      <ion-label>{{data.realIP}}</ion-label>
+      <ion-label>{{data.error}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

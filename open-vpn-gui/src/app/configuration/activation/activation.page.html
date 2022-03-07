@@ -1,0 +1,26 @@
+<ion-header style="padding-top: 25px;">
+  <ion-toolbar>
+    <ion-title style="color: skyblue; font-size: 30px;">Activation Manager</ion-title>
+    <div style="width: 25%; margin: auto; margin-bottom: 30px;">
+      <ion-button class = "button button-block stop-services">
+        Get Activation Key <span><ion-icon name="open-outline"></ion-icon></span>
+     </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form style="margin-top: 45px;">
+    <ion-row>
+      <ion-col size="10">
+        <ion-item>
+          <ion-label position="floating">Enter Activation Key here</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button style="--background: darkslategrey" type="submit" expand="block">Activate</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

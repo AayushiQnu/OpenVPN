@@ -1,0 +1,7 @@
+{
+  "name": "open-vpn-gui",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

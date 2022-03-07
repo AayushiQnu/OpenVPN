@@ -1,0 +1,51 @@
+<ion-header style="padding-top: 25px; margin-left: -20px;">
+  <ion-toolbar>
+    <ion-title style="color: skyblue; font-size: 30px;">VPN Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 style="margin-top: 50px; color: skyblue;">VPN IP Network</h3>
+  <p>Specify the addresses and netmasks for the virtual networks created for VPN clients</p>
+  <h5>Dynamic IP Address Network</h5>
+  <form style="margin-top: 45px;">
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Network Address</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Netmask Address</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <h3 style="color: skyblue;">Routing</h3>
+    <p>Specify the private subnets to which all clients should be given access:</p>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Network Address</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Netmask Address</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button class="save-vpn-settings" type="submit">
+          <ion-icon name="save-outline"></ion-icon>Save Settings</ion-button>
+      </ion-col>
+    </ion-row>
+    
+  </form>
+
+</ion-content>

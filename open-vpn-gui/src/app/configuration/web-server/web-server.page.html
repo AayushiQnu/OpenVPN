@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color: skyblue; font-size: 30px; padding-top: 25px; margin-left: -20px;">Web Server Configuration</ion-title>
+    <p style="color: darkgrey;">This page can be used to configure certificates/keys for the Access Server Web Server.</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table>
+    <tr>
+      <th class="web-server-heading">
+        Active Certificate
+      </th>
+    </tr>
+    <tr *ngFor="let data of activeCertificateConfiguration">
+      <td>{{data.key}}</td>
+      <td>{{data.value}}</td>
+    </tr>
+  </table>
+  <form>
+    <ion-grid>
+      <ion-row class="web-server-heading" style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6; padding: 20px 0;">
+        Please provide:
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <ion-col class="web-server-heading" style="padding-top: 20px;">CA Bundle</ion-col>
+          </ion-row>
+          <ion-row>Provide a concatenated list of CA certificates that validates your web server certificate.</ion-row>
+          <ion-row><ion-item style="margin-left: -15px;" lines="none">Select CA Bundle file</ion-item></ion-row>
+          <ion-row><input type="file" (change)="onFileChange($event)" /></ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-col class="web-server-heading" style="padding-top: 20px;">Certificate</ion-col>
+          </ion-row>
+          <ion-row>Provide web certificate file here.</ion-row>
+          <ion-row><ion-item style="margin-left: -15px;" lines="none">Select Certificate file</ion-item></ion-row>
+          <ion-row><input type="file" (change)="onFileChange($event)" /></ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-col class="web-server-heading" style="padding-top: 20px;">Private Key</ion-col>
+          </ion-row>
+          <ion-row>Provide web certificate private key here.</ion-row>
+          <ion-row><ion-item style="margin-left: -15px;" lines="none">Select Private Key file</ion-item></ion-row>
+          <ion-row><input type="file" (change)="onFileChange($event)" /></ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-row style="margin: 40px 0;">
+      <ion-col style="border-top: 1px solid #dee2e6; margin-bottom: 20px; padding: 20px 0;">
+        <ion-button class="save-advanced-vpn-settings" type="submit">
+          <ion-icon name="save-outline"></ion-icon>Save Settings</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

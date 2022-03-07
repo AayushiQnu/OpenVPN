@@ -1,0 +1,52 @@
+[
+    {
+      "category":"Status",
+      "subs": [
+        {
+          "subcategory":"Status Overview"
+        },
+        {
+          "subcategory":"Current Users"
+        },
+        {
+          "subcategory":"Log Reports"
+        }
+      ]
+    },
+    {
+      "category":"Configuration",
+      "subs": [
+        {
+          "subcategory":"Activation"
+        },
+        {
+          "subcategory":"VPN Settings"
+        },
+        {
+          "subcategory":"Advanced VPN"
+        },
+        {
+          "subcategory":"Web Server"
+        },
+        {
+          "subcategory":"CA Management"
+        }
+      ]
+    },
+    {
+      "category":"User Management",
+      "subs": [
+        {
+          "subcategory":"User Permissions"
+        }
+      ]
+    },
+    {
+        "category":"Tools",
+        "subs": [
+          {
+            "subcategory":"Config Files"
+          }
+        ]
+      }
+  ]

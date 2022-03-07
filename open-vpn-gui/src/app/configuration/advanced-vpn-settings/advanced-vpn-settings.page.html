@@ -1,0 +1,38 @@
+<ion-header style="padding-top: 25px; margin-left: -20px;">
+  <ion-toolbar>
+    <ion-title style="color: skyblue; font-size: 30px;">Advanced VPN Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 style="margin-top: 50px; color: skyblue;">Inter-Client Communication</h3>
+  <ion-item style="margin-left: -15px;" lines="none">
+    <ion-label>Should clients be able to communicate with each other on the VPN IP Network?</ion-label>  
+    <ion-toggle></ion-toggle>  
+  </ion-item>
+  <form style="margin-top: 45px;">
+    <h3 style="color: skyblue;">Connection Security Refresh</h3>
+    <p>For the security purposes, each TLS session is re-negotiated at the specified interval</p>
+    <ion-grid style="margin-left: -42px;">
+      <ion-row>
+        <ion-col size="2" style="text-align: center;">
+          Refresh every
+        </ion-col>
+        <ion-col size="2">
+          <ion-item>
+            <ion-input type="text" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3">
+          minutes
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button class="save-advanced-vpn-settings" type="submit">
+          <ion-icon name="save-outline"></ion-icon>Save Settings</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

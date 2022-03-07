@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 15px;
+    color: darkgray;
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f0f0f5;
+  }
+
+  .stop-services {
+    --background: white;
+    --color: dimgrey;
+    font-weight: 600;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+  }
