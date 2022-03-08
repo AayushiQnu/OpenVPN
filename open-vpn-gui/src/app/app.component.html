@@ -7,20 +7,15 @@
         </a>
         <p style="color: #fff; text-align: center; font-style: italic;">v1.1.0</p>
         <ion-list style="background-color: #1a3967">
-          <ion-item lines="none" style="--background: #1a3967; color: #fafafa;" *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngClass]="{active: isLevel1Shown('idx'+i)}">
+          <ion-item class="category-heading" lines="none" *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngClass]="{active: isLevel1Shown('idx'+i)}">
             <h4>
               {{p.category}}
               <span *ngIf="!isLevel1Shown('idx'+i)"><ion-icon style="--ion-color-base: #fafafa !important;" color="success" item-right name='chevron-down-outline'></ion-icon></span>
               <span *ngIf="isLevel1Shown('idx'+i)"><ion-icon style="--ion-color-base: #fafafa !important;" color="success" item-right name='chevron-up-outline'></ion-icon></span>
             </h4>
             <ion-list *ngIf="isLevel1Shown('idx'+i)">
-              <ion-item *ngFor="let s of p.subs; let i2=index" text-wrap (click)="toggleLevel2('idx'+i+'idx'+i2)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">
-                <h4>{{s.subcategory}}</h4>
-                <ion-list *ngIf="isLevel2Shown('idx'+i+'idx'+i2)">
-                  <ion-item *ngFor="let m of s.manufactures" text-wrap>
-                    {{m.manufacture}}
-                  </ion-item>
-                </ion-list>
+              <ion-item class="subcategory-heading" *ngFor="let s of p.subs; let i2=index" text-wrap (click)="toggleLevel2('idx'+i+'idx'+i2)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">
+                <h4 (click)="activeIndex = i" routerDirection="root" [routerLink]="[s.url]" lines="none" detail="false" [class.selected]="activeIndex == i">{{s.subcategory}}</h4>
               </ion-item>
             </ion-list>
           </ion-item>

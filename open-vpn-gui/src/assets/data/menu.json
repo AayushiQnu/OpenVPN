@@ -3,13 +3,16 @@
       "category":"Status",
       "subs": [
         {
-          "subcategory":"Status Overview"
+          "subcategory":"Status Overview",
+          "url": "/vpn/status/status-overview" 
         },
         {
-          "subcategory":"Current Users"
+          "subcategory":"Current Users",
+          "url": "/vpn/status/current-users" 
         },
         {
-          "subcategory":"Log Reports"
+          "subcategory":"Log Reports",
+          "url": "/vpn/status/log-reports"
         }
       ]
     },
@@ -17,19 +20,24 @@
       "category":"Configuration",
       "subs": [
         {
-          "subcategory":"Activation"
+          "subcategory":"Activation",
+          "url": "/vpn/configuration/activation"
         },
         {
-          "subcategory":"VPN Settings"
+          "subcategory":"VPN Settings",
+          "url": "/vpn/configuration/vpn-settings"
         },
         {
-          "subcategory":"Advanced VPN"
+          "subcategory":"Advanced VPN",
+          "url": "/vpn/configuration/advanced-vpn-settings"
         },
         {
-          "subcategory":"Web Server"
+          "subcategory":"Web Server",
+          "url": "/vpn/configuration/web-server"
         },
         {
-          "subcategory":"CA Management"
+          "subcategory":"CA Management",
+          "url": "/vpn/configuration/ca-management"
         }
       ]
     },
@@ -37,7 +45,8 @@
       "category":"User Management",
       "subs": [
         {
-          "subcategory":"User Permissions"
+          "subcategory":"User Permissions",
+          "url": "/vpn/user-management/user-permissions"
         }
       ]
     },
@@ -45,7 +54,8 @@
         "category":"Tools",
         "subs": [
           {
-            "subcategory":"Config Files"
+            "subcategory":"Config Files",
+            "url": "/vpn/Tools/config-files"
           }
         ]
       }

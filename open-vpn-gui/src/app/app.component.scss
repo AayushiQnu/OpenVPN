@@ -35,11 +35,8 @@ ion-menu.md ion-list#inbox-list ion-list-header {
 
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
-
   margin-bottom: 18px;
-
   color: #757575;
-
   min-height: 26px;
 }
 
@@ -116,4 +113,16 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+.subcategory-heading:hover, .category-heading:hover {
+  cursor: pointer;
+  --background: skyblue;
+}
+.category-heading:hover {
+  --background: #1a3990;
+}
+.category-heading {
+  --background: #1a3967;
+  color: #fafafa;
 }
