@@ -1,10 +1,10 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-toolbar style="border-bottom: 1px solid #dee2e6; margin-top: 10px;">
     <ion-title style="color: skyblue; font-size: 30px;">Current Users</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-searchbar placeholder="Search..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+  <ion-searchbar style="margin-top: 20px;" placeholder="Search..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
   <ion-list>
     <ion-item>
       <ion-label class="heading">Common Name</ion-label>
