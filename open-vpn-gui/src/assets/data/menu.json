@@ -55,7 +55,7 @@
         "subs": [
           {
             "subcategory":"Config Files",
-            "url": "/vpn/Tools/config-files"
+            "url": "/vpn/tools/config-file"
           }
         ]
       }

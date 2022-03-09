@@ -1,0 +1,15 @@
+<ion-header style="margin-top: 10px;" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title style="color: skyblue; font-size: 30px; margin-left: -20px;">Configuration Profiles</ion-title>
+    <div style="margin-bottom: 30px; border-bottom: 1px solid #dee2e6;">
+      <p style="color: darkgrey;">
+        Configuration profiles are used to select between different sets of settings  for the Access Server.
+        You can edit one profile while a different one is being used for the running server (so current users aren't affected by editing changes in progress).
+      </p>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row style="padding: 20px 7px;"><input type="file" (change)="onFileChange($event)" /></ion-row>
+</ion-content>

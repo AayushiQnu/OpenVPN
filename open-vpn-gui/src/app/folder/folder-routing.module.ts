@@ -1,3 +1,5 @@
+import { ConfigFilePage } from './../tools/config-file/config-file.page';
+import { UserPermissionsPage } from './../user-management/user-permissions/user-permissions.page';
 import { WebServerPage } from './../configuration/web-server/web-server.page';
 import { VpnSettingsPage } from './../configuration/vpn-settings/vpn-settings.page';
 import { CaManagementPage } from './../configuration/ca-management/ca-management.page';
@@ -47,6 +49,14 @@ const routes: Routes = [
   {
     path: 'vpn/configuration/web-server',
     component: WebServerPage
+  },
+  {
+    path: 'vpn/user-management/user-permissions',
+    component: UserPermissionsPage
+  },
+  {
+    path: 'vpn/tools/config-file',
+    component: ConfigFilePage
   }
 ];
 

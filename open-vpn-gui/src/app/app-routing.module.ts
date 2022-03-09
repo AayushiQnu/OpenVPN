@@ -42,6 +42,14 @@ const routes: Routes = [
   {
     path: 'vpn/configuration/ca-management',
     loadChildren: () => import('./configuration/ca-management/ca-management.module').then( m => m.CaManagementPageModule)
+  },
+  {
+    path: 'vpn/user-management/user-permissions',
+    loadChildren: () => import('./user-management/user-permissions/user-permissions.module').then( m => m.UserPermissionsPageModule)
+  },
+  {
+    path: 'vpn/tools/config-file',
+    loadChildren: () => import('./tools/config-file/config-file.module').then( m => m.ConfigFilePageModule)
   }
 ];
 

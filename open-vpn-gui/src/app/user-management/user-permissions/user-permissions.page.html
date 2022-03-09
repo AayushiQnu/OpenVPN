@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color: skyblue; font-size: 30px;">User Permissions</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar placeholder="Search by Username" [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <ion-label class="heading1">Username</ion-label>
+      <ion-label class="heading2">Change Password</ion-label>
+      <ion-label class="heading2">Admin</ion-label>
+      <ion-label class="heading2">Delete</ion-label>
+    </ion-item>
+    <ion-item *ngFor="let data of userRecords | filter:filterTerm">
+      <ion-label class="subheading1">{{data.username}}</ion-label>
+      <ion-label class="subheading2"><ion-icon name="create-outline"></ion-icon></ion-label>
+      <ion-label class="subheading2">
+        <ion-checkbox *ngIf="data.isAdmin === 'true'" style="margin: auto;" checked="true" color="dark" (ionChange)="addCheckbox($event,data.username)"></ion-checkbox>
+        <ion-checkbox *ngIf="data.isAdmin === 'false'" style="margin: auto;" checked="false" color="dark" (ionChange)="addCheckbox($event,data.username)"></ion-checkbox>
+      </ion-label>
+      <ion-label class="subheading2"><ion-button style="--background: darkslategrey" (click)="deleteUser(data.username)" expand="block">Delete</ion-button></ion-label>
+    </ion-item>
+  </ion-list>
+  <form>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <ion-item>
+            <ion-label position="floating">New Username</ion-label>
+            <ion-input type="text" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+        <ion-col size="3"><ion-checkbox style="margin: auto;" color="dark" (ionChange)="addCheckbox($event,data.username)"></ion-checkbox></ion-col>
+    </ion-row>
+    </ion-grid>
+  </form>
+  <ion-item lines="none" style="border-bottom: 1px solid #dee2e6; padding: 35px 0;">
+    <ion-label>Require user permissions record for VPN access</ion-label>  
+    <ion-toggle></ion-toggle>  
+  </ion-item>
+  <ion-item>
+    <ion-button class="save-user-permissions-settings" type="submit">
+    <ion-icon name="save-outline"></ion-icon>Save Settings</ion-button>
+  </ion-item>
+  <ion-button button (click)='getListOfDeletedItems()'>See List of Usernames to be deleted</ion-button>
+</ion-content>
